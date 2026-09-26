@@ -3,131 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b0a">
-  <meta name="description" content="A white noise wake light designed to bring gentle sound and warm light into your evening and morning rituals.">
-  <title>STILL — White Noise Wake Light</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#ede6dc">
+  <meta name="description" content="Explore the White Noise Wake-Up Light. Warm ring lighting, white noise, and a softly sculpted design for your daily rhythm.">
+  <title>Wake-Up Light | A gentler way to wake</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%2328211c'/%3E%3Ccircle cx='20' cy='20' r='12' fill='none' stroke='%23d2a678' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="STILL, back to top"><span class="brand-mark" aria-hidden="true"></span>STILL<span class="brand-period">.</span></a>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="#story">The idea</a>
-      <a href="#features">The experience</a>
-      <a href="#design">The design</a>
-      <a href="#ritual">The ritual</a>
-    </nav>
-    <a class="header-cta" href="#explore">Explore the light <span aria-hidden="true">↗</span></a>
+  <div id="progress" aria-hidden="true"></div>
+  <header id="nav">
+    <div class="shell nav-inner">
+      <a class="nav-mark" href="#hero" aria-label="Wake-Up Light home">Wake-Up Light<span class="mark-dot" aria-hidden="true">.</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#overview">Overview</a><a href="#design">Design</a><a href="#film">The film</a><a href="#rhythm">Daily rhythm</a>
+      </nav>
+      <div class="nav-actions"><a class="pill nav-cta" href="#film">Watch the film <span aria-hidden="true">↗</span></a><button id="menuButton" class="pill" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button></div>
+    </div>
   </header>
-
+  <dialog id="mobileMenu" aria-label="Navigation menu">
+    <div class="menu-head"><span>Wake-Up Light.</span><button class="icon-button" id="menuClose" aria-label="Close menu">×</button></div>
+    <nav><a href="#overview">Overview</a><a href="#design">Design</a><a href="#film">The film</a><a href="#rhythm">Daily rhythm</a></nav>
+    <p>Light. Sound. A softer rhythm.</p>
+  </dialog>
   <main id="main">
-    <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-frame">
-        <video class="hero-video" src="assets/wake-light-film.mp4" poster="assets/hero-product.png" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="hero-topline"><span>LIGHT. SOUND. A SOFTER START.</span><span>WHITE NOISE WAKE LIGHT / 01</span></div>
-        <div class="hero-content">
-          <div class="hero-heading">
-            <span class="eyebrow light"><span class="eyebrow-line"></span> Meet your gentler rhythm</span>
-            <h1 id="hero-title">Still<span class="asterisk">*</span></h1>
+    <section id="hero" class="hero">
+      <img class="hero-image" src="assets/hero.webp" width="1672" height="941" alt="Ivory wake-up light with an illuminated ring and a dark star-patterned central panel" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="shell hero-copy">
+        <p class="eyebrow hero-kicker">White noise + wake-up light</p>
+        <h1 class="display hero-title">A gentler<br>way to <em>wake.</em></h1>
+        <p class="hero-description">Warm light. Soothing sound.<br>A little more ease, morning and night.</p>
+        <div class="hero-buttons"><a class="button" href="#overview">Meet the light <span aria-hidden="true">↗</span></a><button class="text-button" data-open-film><span class="play-small" aria-hidden="true">▷</span> Watch the film</button></div>
+      </div>
+      <div class="hero-rail shell"><span>Light & sound, beautifully together.</span><a href="#overview">Scroll to discover <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="overview" class="manifesto section-pad">
+      <div class="shell"><p class="section-label">Made for the in-between moments</p><h2 class="manifesto-copy">The last light of the evening.<br>The first light of your day.<br><span>A softer space for both.</span></h2><p class="intro-copy">A white noise companion and a wake-up light in one sculpted form. Designed to belong at your bedside, and to make light and sound part of your everyday rhythm.</p></div>
+    </section>
+    <section id="design" class="design section-pad">
+      <div class="shell design-grid">
+        <div class="design-photo"><img src="assets/product-angle.webp" width="1280" height="955" loading="lazy" alt="Three-quarter view of the wake-up light on a simple pedestal"><span class="image-note">One form. Light & sound.</span></div>
+        <div class="design-copy"><h2 class="display">A circle<br>of <em>calm.</em></h2><p>A warm halo. A quiet presence. A gently tilted face that feels at home beside you.</p>
+          <div class="feature-list">
+            <div class="feature"><span class="feature-symbol" aria-hidden="true">☼</span><div><h3>Light that sets the mood</h3><p>A luminous ring surrounds the dark central panel, bringing a warm glow to your bedside.</p></div></div>
+            <div class="feature"><span class="feature-symbol sound-symbol" aria-hidden="true">≋</span><div><h3>Sound for your downtime</h3><p>White noise gives your evening a steady soundscape, alongside the light.</p></div></div>
+            <div class="feature"><span class="feature-symbol" aria-hidden="true">◯</span><div><h3>Softly sculpted</h3><p>A rounded ivory shell meets a woven lower surface. Thoughtful from every angle.</p></div></div>
           </div>
-          <div class="hero-side">
-            <p>Fall into quiet. Wake into warmth. One beautifully simple bedside companion for the moments between night and day.</p>
-            <a class="pill-button pill-button-light" href="#story"><span>Discover the feeling</span><span class="button-icon" aria-hidden="true">↗</span></a>
+          <a class="underlined-link" href="#gallery">Explore every angle <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section id="gallery" class="horizontal">
+      <div class="horizontal-sticky">
+        <div class="shell gallery-heading"><h2 class="display">A closer look.</h2><div class="gallery-control"><span id="galleryCounter" aria-live="off">01 / 04</span><button class="icon-button gallery-prev" aria-label="Previous product view">←</button><button class="icon-button gallery-next" aria-label="Next product view">→</button></div></div>
+        <div class="gallery-viewport" tabindex="0" role="region" aria-label="Product views. Use the arrow buttons or swipe to explore.">
+          <div class="archive-track" id="archiveTrack">
+            <figure class="archive-card"><div class="art-wrap"><img src="assets/product-front.webp" width="2752" height="1536" loading="lazy" alt="Front view showing the warm annular light and star-patterned panel"></div><figcaption><span>Front view</span><span>The luminous face</span></figcaption></figure>
+            <figure class="archive-card"><div class="art-wrap"><img src="assets/product-side.webp" width="2752" height="1536" loading="lazy" alt="Side profile showing the sloped face and woven speaker housing"></div><figcaption><span>Side view</span><span>A softly tilted silhouette</span></figcaption></figure>
+            <figure class="archive-card"><div class="art-wrap"><img src="assets/product-base.webp" width="2752" height="1536" loading="lazy" alt="Bottom view with four circular feet, vent openings, and a recessed contact area"></div><figcaption><span>Base view</span><span>Details from below</span></figcaption></figure>
+            <figure class="archive-card"><div class="art-wrap"><img src="assets/overview.webp" width="1672" height="941" loading="lazy" alt="The complete wake-up light from another three-quarter angle"></div><figcaption><span>Three-quarter view</span><span>Light meets texture</span></figcaption></figure>
           </div>
         </div>
-        <a class="scroll-cue" href="#story"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></a>
-        <button class="film-button" type="button" data-open-film aria-label="Watch the 15 second product film with sound"><span class="play-icon" aria-hidden="true">▶</span><span>Watch the film <small>00:15</small></span></button>
+        <div class="shell gallery-bottom"><span class="desktop-instruction">Keep scrolling to change your perspective.</span><span class="mobile-instruction">Swipe for another perspective.</span><div class="gallery-progress" aria-hidden="true"><span id="galleryProgress"></span></div></div>
       </div>
     </section>
-
-    <section class="story-section section-pad" id="story" aria-labelledby="story-title">
-      <div class="story-panel reveal">
-        <div class="section-label"><span class="label-dot"></span> 01 / THE IDEA</div>
-        <h2 id="story-title">Make room for<br><em>a softer kind</em> of morning.</h2>
-        <p class="story-copy">The White Noise Wake Light brings together a calming soundscape and a gentle halo of light. It belongs beside the bed, where winding down and waking up can feel like part of the same thoughtful ritual.</p>
-        <div class="story-foot"><span>QUIET BY DESIGN</span><span class="star-divider" aria-hidden="true">✳</span><span>WARM BY NATURE</span></div>
+    <section id="film" class="film-section">
+      <div class="film-sticky">
+        <video id="ambientVideo" muted loop playsinline preload="metadata" poster="assets/product-angle.webp" aria-label="Silent product film showing the wake-up light from different angles"><source src="assets/product-film.mp4" type="video/mp4"></video>
+        <div class="film-shade" aria-hidden="true"></div>
+        <div class="shell film-copy"><p class="section-label">Light in motion</p><h2 class="display">Slow down.<br><em>Start softly.</em></h2><button class="film-play" data-open-film><span class="play-circle" aria-hidden="true">▷</span><span>Watch the full film<small>15-second product portrait</small></span></button></div>
+        <div class="film-controls shell"><span>A different perspective, with every turn.</span><button id="ambientToggle" class="pill" aria-label="Play background film">Play film <span aria-hidden="true">▷</span></button></div>
       </div>
     </section>
-
-    <section class="features-section section-pad" id="features" aria-labelledby="features-title">
-      <div class="section-head reveal">
-        <div><div class="section-label"><span class="label-dot"></span> 02 / THE EXPERIENCE</div><h2 id="features-title">A little more calm,<br><em>from dusk to dawn.</em></h2></div>
-        <p>Light, sound, and form work together to make your bedside feel more considered.</p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card feature-visual reveal">
-          <img src="assets/detail-product.png" alt="Close view of the wake light's warm illuminated ring and starry center display" loading="lazy">
-          <div class="feature-visual-caption"><span>01 / THE GLOW</span><strong>A warm welcome to the day.</strong></div>
-        </article>
-        <article class="feature-card feature-text feature-warm reveal">
-          <span class="card-number">02 / SOUND</span>
-          <div class="sound-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div><h3>Let the world<br><em>fade away.</em></h3><p>White noise creates a steady, soothing backdrop for the hours you want to call your own.</p></div>
-        </article>
-        <article class="feature-card feature-text feature-dark reveal">
-          <span class="card-number">03 / LIGHT</span>
-          <div class="halo-symbol" aria-hidden="true"><span></span></div>
-          <div><h3>Ease into<br><em>the light.</em></h3><p>A soft, warm glow brings a more peaceful feeling to your evening and morning routine.</p></div>
-        </article>
-        <article class="feature-card feature-text feature-image reveal">
-          <img src="assets/side-product.png" alt="Side view showing the wake light's smooth shell and woven speaker surface" loading="lazy">
-          <div class="feature-image-copy"><span class="card-number">04 / FORM</span><h3>Made to live<br><em>beautifully.</em></h3></div>
-        </article>
+    <section id="details" class="details section-pad">
+      <div class="shell"><h2 class="display details-title">It’s the little things<br>that <em>make the feeling.</em></h2>
+        <div class="details-grid"><figure class="detail-card light-card"><div class="detail-image"><img src="assets/light-detail.webp" width="1200" height="453" loading="lazy" alt="Close-up of the illuminated ring next to the glossy central panel"></div><figcaption><h3>The warm embrace</h3><p>Light follows the circular face, framed by an ivory curve and a deep, glossy centre.</p></figcaption></figure><figure class="detail-card fabric-card"><div class="detail-image"><img src="assets/fabric-detail.webp" width="1200" height="540" loading="lazy" alt="Close-up of the finely woven speaker fabric and slim lower rim"></div><figcaption><h3>A softer texture</h3><p>A fine woven surface gives the lower body a tactile contrast to the smooth shell.</p></figcaption></figure></div>
       </div>
     </section>
-
-    <section class="design-section section-pad" id="design" aria-labelledby="design-title">
-      <div class="design-wrap">
-        <div class="design-copy reveal">
-          <div class="section-label"><span class="label-dot"></span> 03 / THE DESIGN</div>
-          <h2 id="design-title">Every detail has<br><em>its place.</em></h2>
-          <p>From the luminous ring to the starry display, each visible element is composed to feel gentle, intuitive, and at home on your nightstand.</p>
-          <a class="text-link" href="#ritual">See it in your space <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="design-image reveal">
-          <img src="assets/form-product.png" alt="The white noise wake light, showing its circular light, dark display, side controls and fabric-wrapped lower body" loading="lazy">
-          <span class="image-note">A CLOSER LOOK / STILL</span>
-        </div>
-        <div class="details-list reveal" aria-label="Visible design details">
-          <div><span>01</span><strong>Warm light ring</strong><p>An inviting glow with a soft visual edge.</p></div>
-          <div><span>02</span><strong>Starry center display</strong><p>A quiet point of focus at the heart of the form.</p></div>
-          <div><span>03</span><strong>Woven speaker surface</strong><p>Soft texture that suits the bedside.</p></div>
-          <div><span>04</span><strong>Side controls</strong><p>Thoughtfully placed on the sculpted shell.</p></div>
-        </div>
+    <section id="rhythm" class="rhythm section-pad">
+      <div class="shell"><div class="rhythm-heading"><h2 class="display">At home<br>in your <em>rhythm.</em></h2><p>Keep a little space for yourself.<br>Before the day begins, and after it ends.</p></div><div class="rhythm-image"><img src="assets/bedside.webp" width="1595" height="445" loading="lazy" alt="The warm wake-up light on a bedside table beside pale linen bedding"></div>
+        <div class="routine-list"><div><span class="routine-icon" aria-hidden="true">☾</span><h3>Ease into the evening</h3><p>A warm bedside glow and a quiet moment to leave the day behind.</p></div><div><span class="routine-icon" aria-hidden="true">☼</span><h3>Welcome the morning</h3><p>Light and sound make space for a gentler beginning.</p></div><div><span class="routine-icon" aria-hidden="true">◯</span><h3>Make room for you</h3><p>A simple daily companion for reading, resting, and time of your own.</p></div></div>
       </div>
     </section>
-
-    <section class="ritual-section shell" id="ritual" aria-labelledby="ritual-title">
-      <div class="ritual-frame reveal">
-        <img src="assets/bedside-scene.png" alt="The warm wake light on a bedside table beside a softly made bed" loading="lazy">
-        <div class="ritual-overlay" aria-hidden="true"></div>
-        <div class="ritual-content">
-          <div class="section-label dark-label"><span class="label-dot"></span> 04 / THE RITUAL</div>
-          <h2 id="ritual-title">Good nights.<br><em>Gentler mornings.</em></h2>
-          <p>A quiet presence as you settle in. A warm light to greet you when a new day begins.</p>
-          <div class="ritual-steps"><span>01 <strong>Unwind</strong></span><span>02 <strong>Rest</strong></span><span>03 <strong>Rise</strong></span></div>
-        </div>
-      </div>
+    <section id="faq" class="faq section-pad">
+      <div class="shell faq-layout"><div><h2 class="display">A few<br>quiet <em>answers.</em></h2><p class="faq-intro">Get to know the light.</p></div><div class="faq-list">
+        <details><summary>What is the Wake-Up Light?<span class="plus" aria-hidden="true"></span></summary><p>A bedside product that brings white noise and wake-up lighting together in one rounded design. Its illuminated ring, dark central panel, and woven lower housing give it a distinctive presence.</p></details>
+        <details><summary>How does it fit into my day?<span class="plus" aria-hidden="true"></span></summary><p>Think of it as a companion for the moments around sleep: winding down in the evening, beginning your morning, or making your bedside feel more inviting.</p></details>
+        <details><summary>What can I see in the film?<span class="plus" aria-hidden="true"></span></summary><p>The 15-second film shows the product’s shape, ring light, woven surface, and different viewing angles. Open the player to pause, replay, or view it full screen.</p></details>
+        <details><summary>Where can I explore the design?<span class="plus" aria-hidden="true"></span></summary><p>The <a href="#gallery">product gallery</a> shows the front, side, base, and three-quarter views. The detail photographs take you closer to the illuminated ring and woven surface.</p></details>
+      </div></div>
     </section>
-
-    <section class="closing-section section-pad" id="explore" aria-labelledby="closing-title">
-      <div class="closing-card reveal">
-        <img src="assets/final-product.png" alt="White noise wake light glowing warmly against a neutral background" loading="lazy">
-        <div class="closing-content"><div class="section-label dark-label"><span class="label-dot"></span> 05 / MAKE EVERY DAY FEEL DIFFERENT</div><h2 id="closing-title">Begin<br><em>beautifully.</em></h2><p>Bring a softer rhythm to the space where every day begins.</p><a class="pill-button pill-button-dark" href="#top"><span>Back to the beginning</span><span class="button-icon" aria-hidden="true">↑</span></a></div>
-      </div>
+    <section id="closing" class="closing">
+      <img src="assets/closing.webp" width="1672" height="941" loading="lazy" alt="Full view of the ivory wake-up light with a softly glowing ring">
+      <div class="closing-shade" aria-hidden="true"></div>
+      <div class="shell closing-copy"><h2 class="display">A softer start.<br>A calmer <em>close.</em></h2><p>Let light and sound find their place in your day.</p><button class="button" data-open-film>Take another look <span aria-hidden="true">↗</span></button></div>
     </section>
   </main>
-
-  <footer class="footer shell"><div class="footer-line"><a class="footer-brand" href="#top">STILL<span>.</span></a><span>WHITE NOISE WAKE LIGHT</span><a href="#top">BACK TO TOP ↑</a></div><p>Light and sound for a gentler everyday.</p></footer>
-
-  <dialog class="film-dialog" aria-label="Wake light product film"><button type="button" class="dialog-close" data-close-film aria-label="Close video">×</button><video controls playsinline preload="none" poster="assets/hero-product.png"><source src="assets/wake-light-film.mp4" type="video/mp4">Your browser does not support video playback.</video></dialog>
-  <script src="script.js"></script>
+  <footer><div class="shell"><div class="footer-top"><a class="footer-mark" href="#hero">Wake-Up Light.</a><p>Light. Sound.<br>A softer rhythm.</p><a class="back-top" href="#hero">Back to the top <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><span>White Noise Wake-Up Light</span><nav aria-label="Footer navigation"><a href="#design">The design</a><a href="#film">The film</a><a href="#faq">Questions</a></nav><span>Made for everyday moments.</span></div></div></footer>
+  <dialog id="filmDialog" aria-labelledby="filmDialogTitle">
+    <div class="film-dialog-head"><h2 id="filmDialogTitle">The Wake-Up Light film</h2><button id="filmClose" class="icon-button" aria-label="Close film">×</button></div>
+    <video id="dialogVideo" controls muted playsinline preload="none" poster="assets/product-angle.webp"><source src="assets/product-film.mp4" type="video/mp4">Your browser cannot play this film. <a href="assets/product-film.mp4">Download the film</a>.</video>
+  </dialog>
 </body>
 </html>

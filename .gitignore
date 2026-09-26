@@ -1,1 +1,4 @@
-desktop-check.png
+.DS_Store
+Thumbs.db
+qa/
+.finesse/
